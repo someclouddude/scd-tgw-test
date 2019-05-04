@@ -1,4 +1,4 @@
-module "tcds_dmp-tmna_mq" {
+module "tcds_dmp-usw2.1" {
   source = "git::git@github.com:someclouddude/scd-tgw//tgw-vpc-att"
 
   subnet_ids         = ["subnet-07563b004f45fa24d"]
