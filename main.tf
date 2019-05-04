@@ -3,20 +3,25 @@ provider "vault" {
 }
 
 data "vault_generic_secret" "aws_keys_scd" {
-  path = "aws/kv/someclouddude"
+  path = "scd/aws/creds/scd-tfe-svc"
 }
 
 provider "aws" {
-  access_key = "${data.vault_generic_secret.aws_keys_scd.data["access_key_id"]}"
-  secret_key = "${data.vault_generic_secret.aws_keys_scd.data["secret_access_key"]}"
+  access_key = "${data.vault_generic_secret.aws_keys_scd.data["access_key"]}"
+  secret_key = "${data.vault_generic_secret.aws_keys_scd.data["secret_key"]}"
   region     = "us-west-2"
 }
 
 module "tgw-test" {
   source = "git::git@github.com:someclouddude/scd-tgw//tgw"
 
-  #amazon_side_asn = 64519
-  description     = "Creating a test TGW using all default values from the module."
+  amazon_side_asn                 = ""                                                              # auto-gen
+  auto_accept_shared_attachments  = "enable"                                                        # not module default
+  default_route_table_association = "disable"                                                       # module default
+  default_route_table_propagation = "disable"                                                       # module efault
+  description                     = "Creating a test TGW using all default values from the module."
+  dns_support                     = "enable"                                                        # module default
+  vpn_ecmp_support                = "enable"                                                        # module default
 }
 
 module "tgw_rt" {
