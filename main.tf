@@ -22,9 +22,6 @@ data "vault_generic_secret" "aws_keys_scd"{
 resource "random_integer" "aws_asn" {
     min = 64512
     max = 65534
-    keepers = {
-        amazon_side_asn = "${var.amazon_side_asn}"
-    }
 }
 module "tgw-test" {
     source = "git::git@github.com:someclouddude/scd-tgw//tgw"
