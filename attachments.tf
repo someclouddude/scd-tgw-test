@@ -4,6 +4,8 @@ module "tcds_dmp-usw2.1" {
   subnet_ids         = ["subnet-07563b004f45fa24d"]
   transit_gateway_id = "${module.tgw-tcds_dmp-tmna_mq.tgw_id}"
   vpc_id             = "vpc-0ed6cfda9ee3c3a0d"
-  dns_supprt         = "enable"
+  dns_support        = "enable"
   ipv6_support       = "disable"
+
+  tags = "${var.tags}"
 }
