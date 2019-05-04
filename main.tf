@@ -12,6 +12,10 @@ provider "aws" {
   region     = "us-west-2"
 }
 
+output "shit" {
+    value = "${data.vault_generic_secret.aws_keys_scd.data}"
+}
+
 module "tgw-test" {
   source = "git::git@github.com:someclouddude/scd-tgw//tgw"
 
