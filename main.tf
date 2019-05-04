@@ -6,8 +6,8 @@
 
 
 provider "aws" {
-    access_key = "${data.vault_generic_secret.aws_keys_scd.data["access_key"]}"
-    secret_key = "${data.vault_generic_secret.aws_keys_scd.data["secret_key"]}"
+    access_key = "${data.vault_generic_secret.aws_keys_scd.data["access_key_id"]}"
+    secret_key = "${data.vault_generic_secret.aws_keys_scd.data["secret_key_id"]}"
     region = "us-west-2"
 }
 
