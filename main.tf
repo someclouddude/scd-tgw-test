@@ -28,7 +28,7 @@ resource "random_integer" "aws_asn" {
 }
 module "tgw-test" {
     source = "git::git@github.com:someclouddude/scd-tgw//tgw"
-    amazon_side_asn = "${random_integer.aws.result}"
+    amazon_side_asn = "${random_integer.aws_asn.result}"
 }
 
 module "tgw_rt" {
