@@ -26,5 +26,5 @@ module "tgw-test" {
 
 module "tgw_rt" {
   source = "git::git@github.com:someclouddude/scd-tgw//tgw-route-table"
-  tgw_id = "module.tgw-test.tgw_id"
+  tgw_id = "${module.tgw-test.tgw_id}"
 }
