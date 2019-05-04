@@ -3,7 +3,7 @@ provider "vault" {
 }
 
 data "vault_generic_secret" "aws_keys_scd" {
-  path = "scd/aws/creds/scd-tfe-svc"
+  path = "scd/aws/creds/tfe_scd_assume"
 }
 
 provider "aws" {
