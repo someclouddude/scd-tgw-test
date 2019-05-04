@@ -4,6 +4,9 @@
 # VAULT_NAMESPACE = if in use
 
 
+provider "vault" {
+    address = "https://vault.someclouddude.com:8200"
+}
 
 provider "aws" {
     access_key = "${data.vault_generic_secret.aws_keys_scd.data["access_key_id"]}"
@@ -11,9 +14,6 @@ provider "aws" {
     region = "us-west-2"
 }
 
-provider "vault" {
-    address = "https://vault.someclouddude.com:8200"
-}
 
 data "vault_generic_secret" "aws_keys_scd"{
     path = "aws/kv/someclouddude"
