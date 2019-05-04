@@ -15,7 +15,7 @@ provider "aws" {
 module "tgw-test" {
   source = "git::git@github.com:someclouddude/scd-tgw//tgw"
 
-  #amazon_side_asn = 64519
+  amazon_side_asn = 64519
   description     = "Creating a test TGW using all default values from the module."
 }
 
