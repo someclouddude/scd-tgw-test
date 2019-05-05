@@ -1,5 +1,5 @@
 locals {
-  local_tags = {
+  tgw_tags = {
     local_test = "yes"
   }
 }
@@ -15,5 +15,5 @@ module "tgw-tcds_dmp-tmna_mq" {
   description                     = "Creating a test TGW using all default values from the module."
   dns_support                     = "enable"                                                        # module default
   vpn_ecmp_support                = "enable"                                                        # module default
-  tags                            = "${merge(var.tags, var.local_tags)}"
+  tags                            = "${merge(var.tags, local.tgw_tags)}"
 }

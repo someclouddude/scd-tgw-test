@@ -1,5 +1,5 @@
 locals {
-  local_tags = {
+  tgw_rt_tags = {
     local_test = "yes"
   }
 }
