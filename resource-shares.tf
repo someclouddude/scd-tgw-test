@@ -1,6 +1,6 @@
 locals {
   ram_tags = {
-    is_shared = "yes"
+    is_shared = "yep"
   }
 }
 
