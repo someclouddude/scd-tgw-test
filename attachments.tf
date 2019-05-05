@@ -1,6 +1,6 @@
 locals {
   attachment_tags = {
-    local_test = "yes"
+    datacenter = "someclouddude"
   }
 }
 
