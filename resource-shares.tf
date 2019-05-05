@@ -6,7 +6,7 @@ locals {
 
 
 module "tgw_tcds_tmna_share" {
-    source = "git::git@github.com:someclouddude/scd-resource-share?ref=master"
+    source = "git::git@github.com:someclouddude//scd-resource-share?ref=master"
     share_name = "tgw_tcds_tmna_share"
 
     resource_arn = "${module.tcds_dmp-tmna_mq.tgw_id}"
