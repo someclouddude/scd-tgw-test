@@ -45,7 +45,7 @@ module "route_table_propagation_for_scd_prd" {
   tgw_rt_id     = "${module.tcds_dmp-tmna_mq.tgw_rt_id}"
 }
 
-module "to_scd_dev" {
+module "to_scd_prd" {
   source          = "git::git@github.com:someclouddude/scd-tgw//tgw-rt-route"
   dest_cidr_block = "192.168.101.0/24"
   tgw_attach_id   = "tgw-attach-005275a474f461d36"
