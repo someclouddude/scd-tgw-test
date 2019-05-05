@@ -4,7 +4,6 @@ locals {
   }
 }
 
-
 module "tcds_dmp-usw2-1" {
   source = "git::git@github.com:someclouddude/scd-tgw//tgw-vpc-att"
 
@@ -13,5 +12,5 @@ module "tcds_dmp-usw2-1" {
   vpc_id             = "vpc-0ed6cfda9ee3c3a0d"
   dns_support        = "enable"
   ipv6_support       = "disable"
-  tags = "${merge(var.tags, local.attachment_tags)}"
+  tags               = "${merge(var.tags, local.attachment_tags)}"
 }
