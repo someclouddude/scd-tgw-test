@@ -2,6 +2,6 @@ variable "tags" {
   type = "map"
 }
 
-variable "local_vars" {
+variable "local_tags" {
   type = "map"
 }
