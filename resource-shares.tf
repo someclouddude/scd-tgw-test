@@ -8,6 +8,6 @@ module "tgw_tcds_tmna_share" {
   source          = "git::git@github.com:someclouddude/scd-resource-manager"
   share_name      = "tgw_tcds_tmna_share"
   resource_arn    = "${module.tgw-tcds_dmp-tmna_mq.tgw_arn}"
-  share_principal = "375886667331"
+  share_principal = "ou-ycsu-37m07fn3"
   tags            = "${merge(var.tags, local.ram_tags)}"
 }
