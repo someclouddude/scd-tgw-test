@@ -1,3 +1,10 @@
+locals {
+  local_tags = {
+    local_test = "yes"
+  }
+}
+
+
 module "tgw-tcds_dmp-tmna_mq" {
   source = "git::git@github.com:someclouddude/scd-tgw//tgw"
 

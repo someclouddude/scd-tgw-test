@@ -1,3 +1,10 @@
+locals {
+  local_tags = {
+    local_test = "yes"
+  }
+}
+
+
 module "tcds_dmp-usw2-1" {
   source = "git::git@github.com:someclouddude/scd-tgw//tgw-vpc-att"
 
